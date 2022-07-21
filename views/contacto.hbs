@@ -1,0 +1,46 @@
+  <div class="container">
+    <div>
+  <h1 class="titulo-principal text-center">Más info del servicio</h1>
+ <br>
+ <br>
+<div class="container">
+    <div class="text-center m-5">
+    </div>
+<div class="row">
+      <form action="./contacto" method="post">
+<p>
+<label for="nombre">Nombre y Apellido:</label>
+  </p>
+<p>
+<input type="text" name="nombre"></input>
+  </p>
+  <p>
+<label for="telefono">Teléfono:</label>
+  </p>
+<p>
+	<input type="text" name="telefono"></input>
+  </p>
+  <p>
+<label for="correo">Email:</label>
+  </p>
+<p>
+<input type="text" name="correo"></input>
+  </p>
+  <p>
+<label for="comentario">Dejanos tu comentario:</label>
+  </p>
+  <textarea name="comentario" rows="8" cols="50">	
+  </textarea>
+  <br>
+  <input type="submit" value="Enviar">
+</form>
+        <p class="m-1">
+	Click en "Enviar" para finalizar, serás contactado a la brevedad.
+</p>
+        <div class="text-center validacion">
+            <h2 class="text-danger">
+                {{validacion}}
+            </h2>
+        </div>
+    </div>
+</div>
