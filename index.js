@@ -67,6 +67,8 @@ app.get('/servicios', (req, res) =>{
 
 //recibir datos
 app.post('/contacto', (req, res) =>{
+    console.log(req.body);
+    //res.send('tus datos han sido recibidos')
     const {nombre, telefono, correo, comentario} = req.body;
 
 
@@ -79,10 +81,9 @@ app.post('/contacto', (req, res) =>{
         console.log(telefono);
         console.log(correo);
         console.log(comentario);
+        res.render('index')
+};
 
-
-    
-    };
 });
 
 
