@@ -68,7 +68,6 @@ app.get('/servicios', (req, res) =>{
 //recibir datos
 app.post('/contacto', (req, res) =>{
     console.log(req.body);
-    //res.send('tus datos han sido recibidos')
     const {nombre, telefono, correo, comentario} = req.body;
 
 
@@ -81,9 +80,21 @@ app.post('/contacto', (req, res) =>{
         console.log(telefono);
         console.log(correo);
         console.log(comentario);
+        let data = {
+            contacto_nombre: nombre,
+            contacto_correo: correo,
+            contacto_telefono: telefono,
+            contacto_comentario: comentario
+        };
+        
+        let sql = "INSERT INTO CONTACTO SET ?";
+        
+        let query = conexion.query(sql, data, (err, results) =>{
+            if(err) throw err;
+            
+        });
         res.render('index')
 };
-
 });
 
 
@@ -94,3 +105,4 @@ app.listen(Port, ()=>{
 app.on('error', (error)=>{
     console.log(`Tenemos un error ${error}`);
 });
+
