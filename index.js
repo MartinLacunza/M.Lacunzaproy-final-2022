@@ -2,7 +2,6 @@ const express = require ('express');
 const app = express();
 require('dotenv').config();
 const Port = process.env.PORT || 8080;
-const host = ('0.0.0.0'); /*estoborrarsinofunciona*/
 const hbs = require('hbs');
 const mysql = require('mysql2');
 const path = require('path');
@@ -100,14 +99,11 @@ app.post('/contacto', (req, res) =>{
 });
 
 
-/*
+
 app.listen(Port, ()=>{
     console.log(`Servidor corriendo en el puerto ${Port}`);
-}); */
+}); 
 
-app.listen(Port, "0.0.0.0", ()=>{
-    console.log(`Servidor corriendo en el puerto ${Port}`);
-});
 
 app.on('error', (error)=>{
     console.log(`Tenemos un error ${error}`);
