@@ -1,7 +1,8 @@
 const express = require ('express');
 const app = express();
 require('dotenv').config();
-const Port = server.listen(process.env.PORT || 8080);
+const Port = process.env.PORT || 8080;
+const host = '0.0.0.0';
 const hbs = require('hbs');
 const mysql = require('mysql2');
 const path = require('path');
