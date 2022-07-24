@@ -36,6 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 
+
 //configuramos la vista de la aplicacion
 
 
