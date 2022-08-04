@@ -1,0 +1,8 @@
+create database olafurelectricidad;
+use olafurelectricidad;
+create table contacto(contacto
+contacto_nombre varchar(50),
+contacto_telefono varchar(50),
+contacto_correo varchar (40),
+contacto_comentario varchar(500)
+);
